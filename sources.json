@@ -1,0 +1,15 @@
+{
+  "source": "https://sporttown.pro/new",
+  "checked": "2026-11-23",
+  "images": {
+    "hero": "https://static.tildacdn.com/tild3364-3736-4434-b735-663835333365/noroot.png",
+    "gym": "https://static.tildacdn.com/tild6339-3631-4633-b865-303062656134/_17.jpg",
+    "cardio": "https://static.tildacdn.com/tild3762-3231-4465-b533-636231316239/_13.jpg",
+    "functional": "https://static.tildacdn.com/tild6432-6335-4139-a234-366237646230/_30.jpg",
+    "kettlebells": "https://static.tildacdn.com/tild3765-3137-4030-b364-336266393132/_40.jpg",
+    "personal": "https://static.tildacdn.com/tild6161-3531-4139-a433-643666663465/image.png",
+    "club": "https://static.tildacdn.com/tild3039-3362-4031-a133-313165653865/_21.jpg",
+    "detail": "https://static.tildacdn.com/tild3364-6565-4463-b935-383165366662/_9.jpg",
+    "equipment": "https://static.tildacdn.com/tild6264-3734-4730-a137-373566666238/_23.jpg"
+  }
+}
