@@ -4,6 +4,10 @@
 
 ## Просмотр
 
+Опубликованная версия: https://zaharl-torrero.github.io/sporttown-preview/
+
+Репозиторий: https://github.com/zaharl-torrero/sporttown-preview
+
 `python -m http.server 8768 --bind 127.0.0.1 --directory dist`
 
 Локально: http://127.0.0.1:8768/ . GitHub Pages публикует `dist/` через workflow.
