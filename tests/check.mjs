@@ -12,7 +12,7 @@ for(const width of [360,390,430,768,1024,1440,1920]){
  await page.goto(origin,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
  assert.equal(await page.locator('h1').count(),1);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Overflow at ${width}`);
- await page.locator('[data-space="cardio"]').click();assert.match(await page.locator('#space-photo').getAttribute('src'),/cardio/);
+ await page.locator('[data-space="cardio"]').click();await page.waitForFunction(()=>document.querySelector('#space-photo').getAttribute('src').includes('cardio'));
  await page.locator('[data-space="cardio"]').press('ArrowRight');assert.equal(await page.locator('[data-space="functional"]').getAttribute('aria-selected'),'true');
  await page.locator('.space-image').click();await page.locator('#gallery[open]').waitFor();assert.match(await page.locator('#gallery-caption').textContent(),/Функциональная/);await page.locator('#gallery-next').click();assert.match(await page.locator('#gallery-caption').textContent(),/Характер/);await page.keyboard.press('Escape');assert.equal(await page.locator('#gallery[open]').count(),0);
  for(const [months,price] of [[1,6700],[3,17900],[6,26500],[12,39000]]){await page.locator(`[data-months="${months}"]`).click();assert.equal((await page.locator('#card-price').textContent()).replace(/\s/g,''),String(price));assert.equal(await page.locator(`[data-months="${months}"]`).getAttribute('aria-pressed'),'true');assert.match(await page.locator('#card-action').textContent(),new RegExp(String(months)));}
